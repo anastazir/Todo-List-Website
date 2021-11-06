@@ -57,7 +57,6 @@ form.item {
 }
 
 button {
-  text-align: center;
   min-height: 50px;
   width: 50px;
   border-radius: 50%;
@@ -94,16 +93,4 @@ footer {
   color: white;
   color: rgba(0, 0, 0, 0.5);
   text-align: center;
-}
-
-#home {
-  color:red;
-  border-radius: 25px;
-  text-align: center;
-  background-color:black;
-  height: 20px;
-  width: 50px;
-  position:fixed;
-  right:15px;
-  top:60px;
 }

@@ -1,4 +1,6 @@
 //jshint esversion:6
+import {itemsSchema , listSchema} from './schema.js';
+
 const express = require("express");
 
 const bodyParser = require("body-parser");
@@ -15,6 +17,7 @@ var d = new Date();
 var n = d.getDay();
 
 var daylist = ["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];
+
 
 d.getHours();
 d.getMinutes();
@@ -35,10 +38,6 @@ mongoose.connect(MONGO_SERVER, {
   useNewUrlParser: true,
 });
 
-const itemsSchema = {
-  name: {type:String},
-  time:{type:String},
-};
 
 const Item = mongoose.model("Item", itemsSchema);
 
@@ -59,10 +58,6 @@ const item1 = new Item({
 
 const defaultItems = [item1, item2, item3];
 
-const listSchema = {
-  name: String,
-  items: [itemsSchema],
-};
 
 const List = mongoose.model("List", listSchema);
 
